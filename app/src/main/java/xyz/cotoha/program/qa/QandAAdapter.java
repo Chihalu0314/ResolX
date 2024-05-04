@@ -45,7 +45,7 @@ public class QandAAdapter extends RecyclerView.Adapter<QandAAdapter.ViewHolder> 
         holder.answerView.setText(qanda.getAnswer());
 
         // 質問をタップしたときのリスナーを設定します
-        holder.questionView.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // ここで新しいアクティビティを開始します
@@ -58,8 +58,12 @@ public class QandAAdapter extends RecyclerView.Adapter<QandAAdapter.ViewHolder> 
                 }
                 context.startActivity(intent);
             }
-        });
+        };
+
+        holder.questionView.setOnClickListener(onClickListener);
+        holder.answerView.setOnClickListener(onClickListener);  // 回答をタップしたときも同じリスナーを設定します
     }
+
 
     @Override
     public int getItemCount() {

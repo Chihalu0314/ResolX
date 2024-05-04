@@ -45,11 +45,13 @@ public class PrecautionAdapter extends RecyclerView.Adapter<PrecautionAdapter.Vi
         holder.questionView.setText(precaution.getQuestion());
         holder.answerView.setText(precaution.getAnswer());
 
-        holder.questionView.setOnClickListener(new View.OnClickListener() {
+        // 質問をタップしたときのリスナーを設定します
+        View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // ここで新しいアクティビティを開始します
                 Intent intent;
-                int pos = holder.getAdapterPosition();
+                int pos = holder.getAdapterPosition();  // ここで現在のアダプター位置を取得します
                 if (pos != RecyclerView.NO_POSITION && pos < activityClasses.length) {
                     intent = new Intent(context, activityClasses[pos]);
                 } else {
@@ -57,8 +59,12 @@ public class PrecautionAdapter extends RecyclerView.Adapter<PrecautionAdapter.Vi
                 }
                 context.startActivity(intent);
             }
-        });
+        };
+
+        holder.questionView.setOnClickListener(onClickListener);
+        holder.answerView.setOnClickListener(onClickListener);  // 回答をタップしたときも同じリスナーを設定します
     }
+
 
     @Override
     public int getItemCount() {
