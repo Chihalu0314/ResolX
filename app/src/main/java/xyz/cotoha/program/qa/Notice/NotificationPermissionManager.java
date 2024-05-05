@@ -1,4 +1,4 @@
-package xyz.cotoha.program.qa;
+package xyz.cotoha.program.qa.Notice;
 
 import android.app.Activity;
 import android.content.Context;

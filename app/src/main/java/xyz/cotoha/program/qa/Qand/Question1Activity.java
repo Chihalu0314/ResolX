@@ -1,9 +1,11 @@
-package xyz.cotoha.program.qa;
+package xyz.cotoha.program.qa.Qand;
 
 import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import ResolX.R;
 
 public class Question1Activity extends AppCompatActivity {
 

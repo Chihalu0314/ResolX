@@ -1,4 +1,4 @@
-package xyz.cotoha.program.qa;
+package xyz.cotoha.program.qa.Qand;
 
 public class QandA {
     private String question;

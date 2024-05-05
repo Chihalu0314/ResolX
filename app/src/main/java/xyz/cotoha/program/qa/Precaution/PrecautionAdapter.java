@@ -1,6 +1,5 @@
-package xyz.cotoha.program.qa;
+package xyz.cotoha.program.qa.Precaution;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -12,10 +11,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import ResolX.R;
+import xyz.cotoha.program.qa.DefaultActivity;
+
 public class PrecautionAdapter extends RecyclerView.Adapter<PrecautionAdapter.ViewHolder> {
     private List<Precaution> precautionList;
     private Context context;
-    private Class[] activityClasses = {Precaution1Activity.class};
+    private Class[] activityClasses = {};
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView questionView;

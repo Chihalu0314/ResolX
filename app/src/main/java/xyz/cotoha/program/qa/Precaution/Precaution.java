@@ -1,4 +1,4 @@
-package xyz.cotoha.program.qa;
+package xyz.cotoha.program.qa.Precaution;
 
 public class Precaution {
     private String question;

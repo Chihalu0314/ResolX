@@ -1,8 +1,10 @@
-package xyz.cotoha.program.qa;
+package xyz.cotoha.program.qa.Precaution;
 
 import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import ResolX.R;
 
 public class Precaution1Activity extends AppCompatActivity {
 

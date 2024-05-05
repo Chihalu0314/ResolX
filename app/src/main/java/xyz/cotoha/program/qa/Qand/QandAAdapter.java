@@ -1,4 +1,4 @@
-package xyz.cotoha.program.qa;
+package xyz.cotoha.program.qa.Qand;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,10 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import ResolX.R;
+import xyz.cotoha.program.qa.DefaultActivity;
+
 public class QandAAdapter extends RecyclerView.Adapter<QandAAdapter.ViewHolder> {
     private List<QandA> qandaList;
     private Context context;
-    private Class[] activityClasses = {Question1Activity.class, Question2Activity.class};  // ここに各質問に対応するアクティビティクラスを追加します
+    private Class[] activityClasses = {Question1Activity.class, Question2Activity.class, Question3Activity.class,
+            Question4Activity.class, Question5Activity.class, Question6Activity.class, Question7Activity.class, Question8Activity.class};  // ここに各質問に対応するアクティビティクラスを追加します
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView questionView;
